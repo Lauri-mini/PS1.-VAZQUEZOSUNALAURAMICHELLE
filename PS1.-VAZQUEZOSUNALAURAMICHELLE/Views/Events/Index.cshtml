@@ -1,0 +1,52 @@
+﻿@model IEnumerable<PS1._VAZQUEZOSUNALAURAMICHELLE.Models.Event>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Eventos</h2>
+
+<p>
+    @Html.ActionLink("Crear uno nuevo", "Create")
+</p>
+<table class="table table-hover">
+    <tr>
+        <th>
+            Nombre del Evento
+        </th>
+        <th>
+            ¿Que tipo de Seguridad tendrá?
+        </th>
+        <th>
+            Fecha Inicial del Evento
+        </th>
+        <th>
+            Fecha Final del Evento
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreEvento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Seguridad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaEventoInicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaEventoFinal)
+            </td>
+            <td>
+            <span class="glyphicon glyphicon-pencil "></span> @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+            <span class="glyphicon glyphicon-align-left"></span>   @Html.ActionLink("Detalles", "Details", new { id = item.Id }) |
+            <span class="glyphicon glyphicon-trash"></span>  @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+     
+</table>

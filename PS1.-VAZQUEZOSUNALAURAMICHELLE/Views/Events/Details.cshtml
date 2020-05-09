@@ -1,0 +1,50 @@
+﻿@model PS1._VAZQUEZOSUNALAURAMICHELLE.Models.Event
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Evento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nombre del Evento
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreEvento)
+        </dd>
+
+        <dt>
+            Seguridad del Evento
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Seguridad)
+        </dd>
+
+        <dt>
+            Fecha Inicial del Evento
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaEventoInicio)
+        </dd>
+
+        <dt>
+            Fecha Final del Evento
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaEventoFinal)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Regresar", "Index")
+</p>

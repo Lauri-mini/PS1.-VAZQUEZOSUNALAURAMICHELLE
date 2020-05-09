@@ -1,0 +1,39 @@
+﻿@model IEnumerable<PS1._VAZQUEZOSUNALAURAMICHELLE.Models.City>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Ciudades</h2>
+
+<p>
+    @Html.ActionLink("Agregar Ciudad", "Create")
+</p>
+<table class="table table-hover">
+    <tr>
+        <th>
+            Nombre de la Ciudad
+        </th>
+        <th>
+            Estado 
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreCiudad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            <span class="glyphicon glyphicon-pencil "></span> @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+            <span class="glyphicon glyphicon-align-left "></span>  @Html.ActionLink("Detalles", "Details", new { id = item.Id }) |
+            <span class="glyphicon glyphicon-trash "></span>  @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
+        </td>
+    </tr>
+}
+
+</table>

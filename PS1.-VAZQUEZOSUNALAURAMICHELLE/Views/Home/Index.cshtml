@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+    <div class="jumbotron">
+        <h1 class="text-center alert-danger">¡Bienvenido a mi pagina!</h1>
+        <p class="lead alert-info"> Sientate libre de pasar un buen rato e informate</p>
+        <p> de los proximos eventos que pueden pasar cerca de tu estado y/o ciudad </p>
+        <!-- <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>-->
+    </div>
+    <div class="row text-center">
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="~/Content/img/laura.png" width="100" height="100">
+                <div class="caption">
+                    <h3>Contacto</h3>
+                    <p>Aquí hay un poco de información de mí;
+                    la administradora y creadora de la página 
+                    que estas viendo en estos momentos</p>
+                    <p>
+                        <a> @Html.ActionLink("Ir", "Contact", "Home") </a> 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="~/Content/img/eventos.png" width="100" height="100">
+                <div class="caption">
+                    <h3>Eventos</h3>
+                    <p>Haz clic aquí para más información
+                    sobre los eventos que se presentarán
+                    en los proximos días y meses</p>
+                    <p>
+                        <a> @Html.ActionLink("Ir", "Event", "Home") </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="~/Content/img/ciudad.png" width="100" height="100">
+                <div class="caption">
+                    <h3>Ciudad</h3>
+                    <p>Haz clic aquí para más información 
+                    acerca de la ciudades donde se
+                    presentarán nuevos eventos</p>
+                    <p>
+                        <a> @Html.ActionLink("Ir", "City", "Home")</a> 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+

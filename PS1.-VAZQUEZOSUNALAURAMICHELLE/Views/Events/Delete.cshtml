@@ -1,0 +1,56 @@
+﻿@model PS1._VAZQUEZOSUNALAURAMICHELLE.Models.Event
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Esta seguro de eliminarlo?</h3>
+<div>
+    <h4>Evento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nombre del Evento
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreEvento)
+        </dd>
+
+        <dt>
+            Seguridad
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Seguridad)
+        </dd>
+
+        <dt>
+            Fecha Inicial
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaEventoInicio)
+        </dd>
+
+        <dt>
+            Fecha Final
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaEventoFinal)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar", "Index")
+        </div>
+    }
+</div>
